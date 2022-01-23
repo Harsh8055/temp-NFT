@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Home'
 import NFT from './nft'
 import Explore from './components/Explore';
+import Rent from './Rent'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/nft/:id' element={<NFT />} />
         <Route path='/explore' element={<Explore />} />
+        <Route path='/rent' element={<Rent />} />
       </Routes>
     </BrowserRouter>
   );
