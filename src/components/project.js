@@ -1,4 +1,5 @@
 import Button from './button'
+import { Link } from 'react-router-dom';
 
 const Project = ({ title, description, verified, status, raised }) => {
 	return (

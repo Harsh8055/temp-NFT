@@ -1,16 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Projects from './components/projects';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Home'
+import NFT from './nft'
+import Explore from './components/Explore';
 
 function App() {
   return (
-    <div className="w-full min-h-screen">
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <Projects></Projects>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='/nft/:id' element={<NFT />} />
+        <Route path='/explore' element={<Explore />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
