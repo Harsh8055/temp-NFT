@@ -2,7 +2,7 @@ import Project from "./project";
 import { ethers }  from "ethers"
 import TempNFT from "./TempNFT.json"
 import { useState, useEffect } from 'react';
-const ContractAddress = "0xBCeE38A2A257e6982C8b6FE6507CCe6734E19F46";
+const ContractAddress = "0x22aaC814b70b949bC3405276c73e5a3aF0C12F13";
 export default function Projects() {
 	const [projects, setProjects] = useState([1])
 	let [listedNftDetails, setAllNfts] = useState([])
@@ -53,7 +53,9 @@ export default function Projects() {
           let nft = await contract.getNftFromGlobalId(index);
 		  console.log(nft);
 
-		  AllNFTArray.push(nft);
+		   
+			   AllNFTArray.push(nft)
+			
 		  
 		}
 		setAllNfts(AllNFTArray); 
@@ -69,8 +71,8 @@ export default function Projects() {
 				<h1 className="text-8xl font-bold">Trending NFTs</h1>
 			</div>
 			<div className="w-full h-full grid grid-cols-5 gap-4">
-				{listedNftDetails.map( nft => (<Project title="NFT Title Goes here" hourlyRate={nft.hourlyRate} dailyRate={nft.dailyRate} minimumCollateral={nft.minimumCollateral}></Project>))}
-				
+				{  listedNftDetails.map( nft => (<Project title="NFT Title Goes here" hourlyRate={nft.hourlyRate} dailyRate={nft.dailyRate} minimumCollateral={nft.minimumCollateral}></Project>))}
+				 
 			</div>
 		</div>
 	)
