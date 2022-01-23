@@ -2,7 +2,7 @@ import Project from "./project";
 import { ethers }  from "ethers"
 import TempNFT from "./TempNFT.json"
 import { useState, useEffect } from 'react';
-const ContractAddress = "0xeFe1023DCa77bD092D85ABe07447c81496BF32aE";
+const ContractAddress = "0xBCeE38A2A257e6982C8b6FE6507CCe6734E19F46";
 export default function Projects() {
 	const [projects, setProjects] = useState([1])
 	let [listedNftDetails, setAllNfts] = useState([])
